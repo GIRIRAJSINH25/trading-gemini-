@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: '3.10'
       - name: Run Script
-        run: python Trading-Gemini-.py
+        run: python Trading\_Gemini.py
