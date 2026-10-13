@@ -1,6 +1,7 @@
 name: Main
  Workflow
 on:
+workflow\_dispatch:
   push:
     branches:
       - main
