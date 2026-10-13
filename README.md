@@ -1,1 +1,1 @@
-# trading\_gemini.py
+# Trading\_gemini.py
