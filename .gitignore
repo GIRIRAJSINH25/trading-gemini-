@@ -1,0 +1,12 @@
+.env
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+paper_trades.json
+paper_monitor_status.json
+execution-state.sqlite3*
+*.log

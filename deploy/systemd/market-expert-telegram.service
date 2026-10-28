@@ -1,0 +1,20 @@
+[Unit]
+Description=Market Expert Gemini Telegram command listener
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/market-expert-gemini
+EnvironmentFile=/opt/market-expert-gemini/.env
+ExecStart=/opt/market-expert-gemini/.venv/bin/python /opt/market-expert-gemini/trading-agent.py --telegram-service
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

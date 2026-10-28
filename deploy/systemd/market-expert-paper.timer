@@ -1,0 +1,10 @@
+[Unit]
+Description=Start Market Expert Gemini on weekday market sessions
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 09:05:00 Asia/Kolkata
+Persistent=true
+Unit=market-expert-paper.service
+
+[Install]
+WantedBy=timers.target
