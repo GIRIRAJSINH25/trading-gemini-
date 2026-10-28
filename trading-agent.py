@@ -2266,11 +2266,15 @@ def main(unattended=False):
         else:
             print(f"Account margin unavailable: {margin_error}")
         if trading_mode == "paper":
+            net_pnl_text = (
+                "unavailable"
+                if ledger["net_pnl"] is None
+                else f"Rs {ledger['net_pnl']:.2f}"
+            )
             print(
                 f"Closed paper trades: {ledger['closed_trades']}; "
                 f"gross realized P/L: Rs {ledger['realized_pnl']:.2f}; "
-                f"net realized P/L: "
-                f"{'unavailable' if ledger['net_pnl'] is None else f'Rs {ledger['net_pnl']:.2f}'}"
+                f"net realized P/L: {net_pnl_text}"
             )
         else:
             print(
